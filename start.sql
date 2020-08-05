@@ -2,7 +2,5 @@ CREATE DATABASE users;
 use users;
 
 create table emails(
-    -- fill out should have ID, name, and email
+    ID int, name varchar(25), email varchar(40)
 );
-
--- maybe insert a test value

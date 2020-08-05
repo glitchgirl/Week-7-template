@@ -9,9 +9,8 @@ app.use(express.static(__dirname + "/public"));
 
 var connection = mysql.createConnection({
   host     : 'l',
-  user     : '',
+  user     : 'root',
   database : '',
-  password : ''
 });
 
 app.get("/", function(req, res){

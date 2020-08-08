@@ -36,11 +36,3 @@ app.post("/register", function(req, res){
 app.listen(8080, function(){
     console.log("Server running on 8080!");
 });
-
-for(var i=0; i<info.length; i++) {
-    <tr>
-            <td><b>= info[i].id</b></td>
-            <td>= info[i].path </td>
-            <td><input type="button" onclick="onClick('= info[i].id ')" value="Click" /></td>             
-    </tr>
- }

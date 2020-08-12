@@ -11,14 +11,14 @@ var connection = mysql.createConnection({
   host     : 'l',
   user     : 'root',
   database : 'week-7',
-  password : ''
+  password : 'root'
 });
 
 app.get("/", function(req, res){
     // Find count of users in DB
     var q = "SELECT COUNT(*) AS count FROM users";
     connection.query(q, function(err, results){
-        if(err) throw err;
+        if(err) console.log(err);
         var count = results[0].count; 
         res.render("home", {count: count});
     });
@@ -29,7 +29,7 @@ app.post("/register", function(req, res){
         email: req.body.email
     };
     connection.query('INSERT INTO users SET ?', person, function(err, result) {
-        if (err) throw err;
+        if (err) console.log(err);
         res.redirect("/");
     });
 });
